@@ -20,8 +20,13 @@ class Auto:
         
 
     def cantidadAsientos(self):
-    return sum(1 for asiento in self.asientos if asiento is not None)
-
+        contador = 0 
+        for i in range(len(self.asientos)-1):
+            if self.asientos[i]!=None:
+                contador+=1
+            else:
+                pass
+        return contador
         
     def verificarIntegridad(self, motor):
         registroAuto = self.registro
